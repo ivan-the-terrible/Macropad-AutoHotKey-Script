@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
+<svg
+   height="800px"
+   width="800px"
+   version="1.1"
+   id="Layer_1"
+   viewBox="0 0 392.598 392.598"
+   xml:space="preserve"
+   fill="#000000"
+   sodipodi:docname="Switch Audio.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs30"><style
+     id="style1007">.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}.cls-2{fill:#020202;}</style><style
+     id="style1109">.cls-1{fill:none;stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}</style></defs><sodipodi:namedview
+   id="namedview28"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="0.89875"
+   inkscape:cx="402.22531"
+   inkscape:cy="433.37969"
+   inkscape:window-width="1440"
+   inkscape:window-height="2471"
+   inkscape:window-x="2551"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+
+
+
+
+
+<g
+   id="g1126"
+   transform="matrix(7.9437786,0,0,7.9437786,9.4284911,25.182051)"
+   inkscape:label="Headphones"><path
+     class="cls-1"
+     d="m 5.8,13 h 0.48 v 8.59 H 5.8 a 4.3,4.3 0 0 1 -4.3,-4.3 v 0 A 4.3,4.3 0 0 1 5.8,13 Z"
+     id="path1113" /><path
+     class="cls-1"
+     d="m 17.73,13 h 0.48 a 4.3,4.3 0 0 1 4.3,4.3 v 0 a 4.3,4.3 0 0 1 -4.3,4.3 h -0.48 z"
+     id="path1115" /><path
+     class="cls-1"
+     d="M 3.41,13.91 V 11.05 A 8.6,8.6 0 0 1 12,2.45 v 0 a 8.6,8.6 0 0 1 8.59,8.6 v 2.86"
+     id="path1117" /></g><g
+   id="g1027"
+   transform="matrix(8.5682671,0,0,8.5682671,198.33417,167.99009)"
+   inkscape:label="Speaker"><rect
+     class="cls-1"
+     x="4.3600001"
+     y="1.5"
+     width="15.27"
+     height="21"
+     id="rect1011" /><circle
+     class="cls-1"
+     cx="12"
+     cy="15.82"
+     r="3.8199999"
+     id="circle1013" /><circle
+     class="cls-1"
+     cx="12"
+     cy="6.27"
+     r="1.91"
+     id="circle1015" /><circle
+     class="cls-2"
+     cx="12"
+     cy="15.82"
+     r="0.94999999"
+     id="circle1017" /></g><g
+   id="g24"
+   inkscape:label="Arrows">     <path
+   style="fill:#000000"
+   d="m 295.661,118.562 0.453,2.78 -12.154,-8.598 c -4.913,-3.491 -11.766,-2.327 -15.192,2.651 -3.426,4.978 -2.327,11.766 2.651,15.192 l 33.616,23.79 c 5.689,3.556 11.636,2.069 15.192,-2.65 l 23.79,-33.616 c 3.491,-4.913 2.327,-11.766 -2.65,-15.192 -4.978,-3.491 -11.766,-2.327 -15.192,2.651 l -8.598,12.024 -0.453,-2.78 C 308.914,67.234 263.597,35.04 215.888,43.25 c -5.947,1.034 -9.891,6.659 -8.857,12.606 1.034,5.947 6.659,9.956 12.606,8.857 35.749,-6.079 69.882,18.034 76.024,53.849 z"
+   id="path20" /> <path
+   style="fill:#000000"
+   d="m 172.962,327.693 c -35.749,6.077 -69.883,-17.907 -75.96,-53.721 l -0.453,-2.78 12.154,8.598 c 4.913,3.491 11.766,2.327 15.192,-2.65 3.491,-4.913 2.327,-11.766 -2.651,-15.192 l -33.616,-23.79 c -5.689,-3.556 -11.636,-2.069 -15.192,2.65 l -23.79,33.616 c -3.491,4.913 -2.327,11.766 2.651,15.192 4.978,3.426 11.766,2.327 15.192,-2.65 l 8.469,-12.024 0.453,2.78 c 8.21,47.58 53.527,79.774 101.172,71.499 5.947,-1.034 9.891,-6.659 8.857,-12.606 -0.907,-5.884 -6.531,-9.892 -12.478,-8.922 z"
+   id="path22" /> </g>
+
+</svg>
