@@ -35,7 +35,7 @@ Explorer_GetPath(hwnd:="")
 			; StrReplace() is not case sensitive
 			; check for StringCaseSense in v1 source script
 			; and change the CaseSense param in StrReplace() if necessary
-			path := StrReplace(path, "%" . hex, Chr("0x" . hex))
+			path := StrReplace(path, "%" . hex[0], Chr("0x" . hex[0]))
 		Else Break
 	return path
 }
