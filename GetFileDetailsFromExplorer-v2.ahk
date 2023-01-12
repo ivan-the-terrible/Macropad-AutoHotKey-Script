@@ -1,14 +1,10 @@
 ﻿#Requires Autohotkey v2.0-beta.1+
-
+; path := Explorer_GetPath()
+; all := Explorer_GetAll()
 F13::
 {
-	path := Explorer_GetPath()
-	all := Explorer_GetAll()
 	sel := Explorer_GetSelected()
-	; MsgBox(path)
-	; MsgBox(all)
-	MsgBox(sel)
-return
+	Run "C:\Program Files\Microsoft VS Code\Code.exe " sel
 }
 
 Explorer_GetPath(hwnd:="")
@@ -84,12 +80,24 @@ Explorer_Get(hwnd:="",selection:=false)
 	}
 	else
 	{
+		; collection := window.document.Folder.Items FOR ALL ITEMS
 		if selection
-			collection := window.document.SelectedItems
+		{
+			if window.document.SelectedItems.Count == 0
+			{
+				ret := '"' . window.document.Folder.Self.Path . '"'
+			}
+			else
+			{
+				collection := window.document.SelectedItems
+				for item in collection
+					ret .= '"' . item.path . '"' . '`s'
+			}
+		}
 		else
-			collection := window.document.Folder.Items
-		for item in collection
-			ret .= item.path "`n"
+		{
+			ret := window.document.Folder.Self.Path
+		}
 	}
-	return Trim(ret,"`n")
+	return ret
 }
