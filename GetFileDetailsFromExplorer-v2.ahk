@@ -1,16 +1,15 @@
 ﻿#Requires Autohotkey v2.0-beta.1+
-; REMOVED: #NoEnv
 
 F13::
-{ ; V1toV2: Added bracket
+{
 	path := Explorer_GetPath()
 	all := Explorer_GetAll()
 	sel := Explorer_GetSelected()
-	MsgBox(path)
-	MsgBox(all)
+	; MsgBox(path)
+	; MsgBox(all)
 	MsgBox(sel)
 return
-} ; Added bracket before function
+}
 
 Explorer_GetPath(hwnd:="")
 {
