@@ -3,8 +3,19 @@
 ; all := Explorer_GetAll()
 F13::
 {
+	; Open Folder(s)/File(s) in VSCode
 	sel := Explorer_GetSelected()
 	Run "C:\Program Files\Microsoft VS Code\Code.exe " sel
+}
+
+F14::
+{
+	; Extract file(s) using 7zip --- will absolutely overwrite with -y flag
+	workingDir := Explorer_GetPath()
+	sel := Explorer_GetFor_7zip()
+	if sel.Length > 0
+		for file in sel
+			Run "C:\Program Files\7-Zip\7zr.exe x -y " file, workingDir
 }
 
 Explorer_GetPath(hwnd:="")
@@ -64,40 +75,43 @@ Explorer_Get(hwnd:="",selection:=false)
 {
 	if !(window := Explorer_GetWindow(hwnd))
 		return ErrorLevel := "ERROR"
-	if (window="desktop")
+	if selection
 	{
-		hwWindow := ControlGetHWND("SysListView321", "ahk_class Progman")
-		if !hwWindow ; #D mode
-			hwWindow := ControlGetHWND("SysListView321", "A")
-		files := ListViewGetContent(( selection ? "Selected":"") "Col1",,ahk_id %hwWindow%)
-		base := SubStr(A_Desktop, -1, 1)=="\" ? SubStr(A_Desktop, 1, -1) : A_Desktop
-		Loop Parse, files, "`n", "`r"
+		if window.document.SelectedItems.Count == 0
 		{
-			path := base "\" A_LoopField
-			if FileExist(path) ; ignore special icons like Computer (at least for now)
-				ret .= path "`n"
+			ret := '"' . window.document.Folder.Self.Path . '"'
+		}
+		else
+		{
+			collection := window.document.SelectedItems
+			for item in collection
+				ret .= '"' . item.path . '"' . '`s'
 		}
 	}
 	else
 	{
-		; collection := window.document.Folder.Items FOR ALL ITEMS
-		if selection
-		{
-			if window.document.SelectedItems.Count == 0
-			{
-				ret := '"' . window.document.Folder.Self.Path . '"'
-			}
-			else
-			{
-				collection := window.document.SelectedItems
-				for item in collection
-					ret .= '"' . item.path . '"' . '`s'
-			}
-		}
-		else
-		{
-			ret := window.document.Folder.Self.Path
-		}
+		ret := window.document.Folder.Self.Path
+	}
+	return ret
+}
+
+Explorer_GetFor_7zip(hwnd:="")
+{
+	if !(window := Explorer_GetWindow(hwnd))
+		return ErrorLevel := "ERROR"
+
+		; for more property information, see MS documentation on COM Objects
+		; Need to: $ShellExp = New-Object -ComObject Shell.Application
+		; Then you can traverse object properties using Get-Member
+		; So if Explorer is open, you could:
+		; ($ShellExp).Windows()[0].Document | Get-Member
+	ret := []
+	if !(window.document.SelectedItems.Count == 0)
+	{
+		collection := window.document.SelectedItems
+		for item in collection
+			if !item.IsFolder
+				ret.Push('"' . item.path . '"')
 	}
 	return ret
 }
