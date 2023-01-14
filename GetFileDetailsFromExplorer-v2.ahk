@@ -12,10 +12,19 @@ F14::
 {
 	; Extract file(s) using 7zip --- will absolutely overwrite with -y flag
 	workingDir := Explorer_GetPath()
-	sel := Explorer_GetFor_7zip()
+	sel := Explorer_GetFor_7zipExtraction()
 	if sel.Length > 0
 		for file in sel
 			Run "C:\Program Files\7-Zip\7zr.exe x -y " file, workingDir
+}
+
+F15::
+{
+	; Add selected file(s)/folder(s) to a 7z archive using 7zip
+	workingDir := Explorer_GetPath()
+	sel := Explorer_GetFor_7zipArchival()
+	if sel != ""
+		Run "C:\Program Files\7-Zip\7zr.exe a -t7z archive.7z " . sel, workingDir
 }
 
 Explorer_GetPath(hwnd:="")
@@ -95,7 +104,7 @@ Explorer_Get(hwnd:="",selection:=false)
 	return ret
 }
 
-Explorer_GetFor_7zip(hwnd:="")
+Explorer_GetFor_7zipExtraction(hwnd:="")
 {
 	if !(window := Explorer_GetWindow(hwnd))
 		return ErrorLevel := "ERROR"
@@ -106,12 +115,32 @@ Explorer_GetFor_7zip(hwnd:="")
 		; So if Explorer is open, you could:
 		; ($ShellExp).Windows()[0].Document | Get-Member
 	ret := []
-	if !(window.document.SelectedItems.Count == 0)
+	if window.document.SelectedItems.Count != 0
 	{
 		collection := window.document.SelectedItems
 		for item in collection
 			if !item.IsFolder
 				ret.Push('"' . item.path . '"')
+	}
+	return ret
+}
+
+Explorer_GetFor_7zipArchival(hwnd:="")
+{
+	if !(window := Explorer_GetWindow(hwnd))
+		return ErrorLevel := "ERROR"
+
+		; for more property information, see MS documentation on COM Objects
+		; Need to: $ShellExp = New-Object -ComObject Shell.Application
+		; Then you can traverse object properties using Get-Member
+		; So if Explorer is open, you could:
+		; ($ShellExp).Windows()[0].Document | Get-Member
+	ret := ""
+	if window.document.SelectedItems.Count != 0
+	{
+		collection := window.document.SelectedItems
+		for item in collection
+			ret .= '"' . item.path . '"' . '`s'
 	}
 	return ret
 }
