@@ -4,7 +4,7 @@
 F13::
 {
 	; Open Folder(s)/File(s) in VSCode
-	; Command is code.exe and then any the paths of file(s)/folder(s) to be opened
+	; Command is code.exe and then any of the paths of file(s)/folder(s) to be opened
 	sel := Explorer_GetSelected()
 	Run "C:\Program Files\Microsoft VS Code\Code.exe " sel
 }
@@ -45,7 +45,15 @@ F17::
 		}
 }
 
-
+F18::
+{
+	; Open file(s) in Inkscape
+	; Command is inkscape.exe and then any of the paths of file(s) to be opened
+	sel := Explorer_GetSelected_FilesOnly_AsArray()
+	if sel.Length > 0
+		for file in sel
+			Run "C:\Program Files\Inkscape\bin\inkscape.exe " file
+}
 
 
 Explorer_GetPath(hwnd:="")
