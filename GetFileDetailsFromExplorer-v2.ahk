@@ -4,6 +4,7 @@
 F13::
 {
 	; Open Folder(s)/File(s) in VSCode
+	; Command is code.exe and then any the paths of file(s)/folder(s) to be opened
 	sel := Explorer_GetSelected()
 	Run "C:\Program Files\Microsoft VS Code\Code.exe " sel
 }
@@ -11,8 +12,9 @@ F13::
 F14::
 {
 	; Extract file(s) using 7zip --- will absolutely overwrite with -y flag
+	; Command is '7zr.exe' with 'x -y' flags to eXtract and Yes to all inquiries, then path of file
 	workingDir := Explorer_GetPath()
-	sel := Explorer_GetFor_7zipExtraction()
+	sel := Explorer_GetSelected_FilesOnly_AsArray()
 	if sel.Length > 0
 		for file in sel
 			Run "C:\Program Files\7-Zip\7zr.exe x -y " file, workingDir
@@ -21,11 +23,30 @@ F14::
 F15::
 {
 	; Add selected file(s)/folder(s) to a 7z archive using 7zip
+	; Command is '7zr.exe' with 'a -t7z archive.7z' to create Archive of type 7z with name archive.7z,
+	; then the paths of file(s)/folder(s) to be added to the archive
 	workingDir := Explorer_GetPath()
-	sel := Explorer_GetFor_7zipArchival()
+	sel := Explorer_GetSelected_AsString()
 	if sel != ""
 		Run "C:\Program Files\7-Zip\7zr.exe a -t7z archive.7z " . sel, workingDir
 }
+
+F17::
+{
+	; Convert to PNG via Magick command
+	; Command is 'magick.exe', then the file to converted, and the file name of the new PNG file
+	workingDir := Explorer_GetPath()
+	sel := Explorer_GetSelected_FilesOnly_AsArray(hwnd:="", NeedOnlyFileName:=true)
+	if sel.Length > 0
+		for fileName in sel
+		{
+			newPNG := RegExReplace(fileName, "[.].+$", "`.png" . '"') ; replace extension with PNG
+			Run "C:\Program Files\ImageMagick-7.1.0-Q16-HDRI\magick.exe " . fileName . " " . newPNG, workingDir
+		}
+}
+
+
+
 
 Explorer_GetPath(hwnd:="")
 {
@@ -104,7 +125,7 @@ Explorer_Get(hwnd:="",selection:=false)
 	return ret
 }
 
-Explorer_GetFor_7zipExtraction(hwnd:="")
+Explorer_GetSelected_FilesOnly_AsArray(hwnd:="", NeedOnlyFileName:=false)
 {
 	if !(window := Explorer_GetWindow(hwnd))
 		return ErrorLevel := "ERROR"
@@ -114,18 +135,30 @@ Explorer_GetFor_7zipExtraction(hwnd:="")
 		; Then you can traverse object properties using Get-Member
 		; So if Explorer is open, you could:
 		; ($ShellExp).Windows()[0].Document | Get-Member
+		; To actually see the object:
+		; ($ShellExp).Windows()[0].Document().SelectedItems()
 	ret := []
 	if window.document.SelectedItems.Count != 0
 	{
-		collection := window.document.SelectedItems
-		for item in collection
-			if !item.IsFolder
-				ret.Push('"' . item.path . '"')
+		if NeedOnlyFileName
+		{
+			collection := window.document.SelectedItems
+			for item in collection
+				if !item.IsFolder
+					ret.Push('"' . item.name . '"')
+		}
+		else
+		{
+			collection := window.document.SelectedItems
+			for item in collection
+				if !item.IsFolder
+					ret.Push('"' . item.path . '"')
+		}
 	}
 	return ret
 }
 
-Explorer_GetFor_7zipArchival(hwnd:="")
+Explorer_GetSelected_AsString(hwnd:="")
 {
 	if !(window := Explorer_GetWindow(hwnd))
 		return ErrorLevel := "ERROR"
@@ -135,6 +168,8 @@ Explorer_GetFor_7zipArchival(hwnd:="")
 		; Then you can traverse object properties using Get-Member
 		; So if Explorer is open, you could:
 		; ($ShellExp).Windows()[0].Document | Get-Member
+		; To actually see the object:
+		; ($ShellExp).Windows()[0].Document().SelectedItems()
 	ret := ""
 	if window.document.SelectedItems.Count != 0
 	{
