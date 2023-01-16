@@ -1,11 +1,13 @@
 # Macro Pad - Sweet 16
 
 1 - Open w/ VSCode
+	- F13
 2 - Extract File 
-	- 7zip command?
+	- F14 - 7zip command
 3 - Archive Files 
-	- 7zip command?
+	- F15 - 7zip command
 4 - 
+	- F16
 
 5 - Color Picker 
 	- Windows + Shift  + c
@@ -19,15 +21,21 @@
 9 - Snipping Tool 
 	- Windows + Shift + s
 10 - Export to PNG
-	- Inkscape Command line?
+	- F17 - Magick command
 11 - Open w/ Inkscape
+	- F18
 12 - 
+	- F19
 
 
 13 - Volume Down
+	- KC_VOLD
 14 - Volume Up
+	- KC_VOLU
 15 - Mute/Unmute Mic
+	- F20
 16 - Switch Audio Input
+	- F21
 
 ## Commands
 
