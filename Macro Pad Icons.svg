@@ -29,14 +29,14 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-bbox="true"
      inkscape:zoom="2.8284271"
-     inkscape:cx="162.10423"
-     inkscape:cy="164.93266"
+     inkscape:cx="123.56691"
+     inkscape:cy="191.09561"
      inkscape:window-width="2560"
      inkscape:window-height="1351"
      inkscape:window-x="-9"
      inkscape:window-y="898"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g6058"
+     inkscape:current-layer="g1465"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-edge-midpoints="true"
@@ -674,12 +674,12 @@
          id="rect7316-0-0-4-8-2"
          width="49.133858"
          height="49.133858"
-         x="503.70901"
-         y="36.329887"
+         x="502.67719"
+         y="34.025959"
          inkscape:label="Background" />
       <g
          id="g6058"
-         transform="matrix(0.79464569,0,0,0.79464569,506.02588,38.646737)"
+         transform="matrix(0.79464569,0,0,0.79464569,504.99403,36.342809)"
          inkscape:label="PNG Icon"><path
    id="rect8927"
    style="fill:#e9e9e0;stroke-width:6.99995;stop-color:#000000"
@@ -722,10 +722,32 @@
 
 	<polygon
    style="fill:#88c057"
-   points="23.517,24.517 6.5,39 17.5,39 49.5,39 49.5,28 39.5,18.5 29,30 "
+   points="17.5,39 49.5,39 49.5,28 39.5,18.5 29,30 23.517,24.517 6.5,39 "
    id="polygon6056" />
 
 </g>
+    </g>
+    <g
+       id="g10160"
+       transform="translate(-18.208,-0.89129682)"
+       inkscape:label="Open with Inkscape">
+      <rect
+         style="fill:#007f4e;fill-opacity:1;stroke:none;stroke-width:1.50425;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
+         id="rect7316-0-0-4-8-2-3"
+         width="49.133858"
+         height="49.133858"
+         x="607.81433"
+         y="38.686569"
+         inkscape:label="Background" />
+      <g
+         style="fill:#000000"
+         id="g10132"
+         transform="matrix(1.4837782,0,0,1.4837782,779.23308,44.889284)"
+         inkscape:label="Inkscape Icon">
+        <path
+           d="m -89.539578,21.587424 c -1.263,1.135 0.142,2.284 1.388,1.552 0.277,-0.281 -0.008,-1.27 -1.387,-1.552 z m -18.135002,1.832 c 0.98,0.849 2.496,-0.211 2.949,-1.395 -0.95,-1.262 -4.507,0.046 -2.949,1.395 z m 18.655002,-2.987 c 0,0.562 4.141,0.931 4.141,-0.132 -0.397,-0.733 -1.16,-1.222 -2.038,-1.222 -0.929,0 -1.731,0.549 -2.097,1.34 z m -12.718002,-21.8379996 -11.072,11.329 c -3.74,4.6319996 2.547,4.0939996 5.241,5.4269996 0.967,0.988 -3.705,1.718 -2.738,2.707 0.966,0.988 5.846,1.904 6.814,2.892 0.966,0.988 -1.979,2.037 -1.012,3.024 0.966,0.99 3.203,0.052 3.621,2.334 0.297,1.63 4.029002,0.7 5.853002,-0.635 0.967,-0.988 -1.849,-0.896 -0.882,-1.884 2.403,-2.458 4.642,-0.892 5.465,-3.357 0.406,-1.217 -3.539,-1.876 -2.571,-2.864 2.782,-1.625 12.395,-2.682 7.833,-7.243 l -11.474,-11.7299996 c -0.659,-0.629 -1.554,-1.016 -2.539,-1.016 -0.985002,0 -1.880002,0.387 -2.540002,1.017 z m 4.408002,0.79599997 4.38,4.44900003 c 0.207,0.229 0.333,0.533 0.333,0.868 0,0.226 -0.058,0.438 -0.159,0.623 l 0.003,-0.007 -2.174,-1.739 -0.427,2.576 -1.818,-0.959 -2.909002,1.837 -0.963,-3.874 -1.563,2.704 h -2.391 c -0.975,0 -1.088,-1.237 -0.204,-2.122 1.546,-1.668 3.32,-3.36900003 4.285,-4.35500003 0.466,-0.45299997 1.102002,-0.73199997 1.804002,-0.73199997 0.702,0 1.338,0.279 1.804,0.73299997 l -0.001,-0.001 z M -104.38658,15.966424 c 0.296,0.184 4.771002,1.093 5.865002,1.275 0.379,0.08 0.11,0.47 -0.412,0.734 -1.178002,0.314 -6.894002,-2.008 -5.452002,-2.008 z"
+           id="path10123" />
+      </g>
     </g>
   </g>
   <g
@@ -854,7 +876,7 @@
      inkscape:label="First Row">
     <g
        id="g1609"
-       inkscape:label="VSCode">
+       inkscape:label="Open with VSCode">
       <rect
          style="fill:#ff8c00;fill-opacity:1;stroke:none;stroke-width:1.50425;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
          id="rect7316-0-0-0"
