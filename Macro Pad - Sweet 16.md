@@ -1,44 +1,40 @@
 # Macro Pad - Sweet 16
 
-1 - Open w/ VSCode
-	- F13
-2 - Extract File 
-	- F14 - 7zip command
-3 - Archive Files 
-	- F15 - 7zip command
-4 - 
-	- F16
+### Row 1
 
-5 - Color Picker 
-	- Windows + Shift  + c
-6 - Screen Ruler 
-	- Windows  + Shift + m
-7 - Always On Top 
-	- Windows + Ctrl + t
-8 - Mouse Pointer Crosshairs 
-	- Windows + Alt + p
+| Open w/ VSCode = F13 | Extract Files | Archive Files | F16??? |
+| -------------------- | ------------- | ------------- | ------ |
+| F13                  | F14           | F15           |        |
+|                      | 7zip command  | 7zip command  |        |
 
-9 - Snipping Tool 
-	- Windows + Shift + s
-10 - Export to PNG
-	- F17 - Magick command
-11 - Open w/ Inkscape
-	- F18
-12 - 
-	- F19
+### Row 2
 
+| Color Picker        | Screen Ruler        | Always On Top      | Mouse Pointer Crosshairs |
+| ------------------- | ------------------- | ------------------ | ------------------------ |
+| Windows + Shift + C | Windows + Shift + M | Windows + Ctrl + T | Windows + Alt + P        |
 
-13 - Volume Down
-	- KC_VOLD
-14 - Volume Up
-	- KC_VOLU
-15 - Mute/Unmute Mic
-	- F20
-16 - Switch Audio Input
-	- F21
+### Row 3
+
+| Snipping Tool       | Export to PNG  | Open w/Inkscape     | Video On/Off        |
+| ------------------- | -------------- | ------------------- | ------------------- |
+| Windows + Shift + S | F17            | F18                 | Windows + Shift + O |
+|                     | Magick command | Inkscape.exe [file] |                     |
+
+### Row 4
+
+| Volume Down | Volume Up | Mute/Unmute Mic     | Switch Audio Input |
+| ----------- | --------- | ------------------- | ------------------ |
+| KC_VOLD     | KC_VOLU   | Windows + Shift + A | F19                |
+|             |           |                     |                    |
 
 ## Commands
 
 ### Convert C code to JSON:
 
 qmk c2json -km=1upkeyboards/sweet16/v1/keymaps/ivan -kb=1upkeyboards/sweet16/v1 -o ./keymap.json keymap.c
+
+## Instructions
+
+- With ***QMK MSYS***, use the *keymap.json* to generate the HEX file that's to be flashed the macropad. 
+  - Once you have the HEX file, use ***QMK Toolbox*** with the macropad connected and hit the Reset switch on the macropad.
+  - You'll notice with QMK Toolbox that it's flashing based on the output.
