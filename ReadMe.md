@@ -6,7 +6,7 @@ By programming the [Sweet 16 Macro Pad Black from 1upkeyboards](https://1upkeybo
 
 The PNG and SVG you see here has been formatted to a size that will fit underneath the keycaps should you print it out.
 
-![Macro Pad Icons](https://github.com/ivan-the-terrible/Macropad-AutoHotKey-Script/blob/master/Macro%20Pad%20Icons%20-%20 Grid.svg)
+![Macro Pad Icons](https://github.com/ivan-the-terrible/Macropad-AutoHotKey-Script/blob/master/Macro%20Pad%20Icons%20-%20Grid.svg)
 
 ### Row 1
 
