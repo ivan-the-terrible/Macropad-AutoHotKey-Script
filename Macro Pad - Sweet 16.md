@@ -15,26 +15,26 @@
 
 ### Row 3
 
-| Snipping Tool       | Export to PNG  | Open w/Inkscape     | Video On/Off        |
-| ------------------- | -------------- | ------------------- | ------------------- |
-| Windows + Shift + S | F17            | F18                 | Windows + Shift + O |
-|                     | Magick command | Inkscape.exe [file] |                     |
+| Snipping Tool       | Export to PNG  | Open w/Inkscape     | Window Switcher  |
+| ------------------- | -------------- | ------------------- | ---------------- |
+| Windows + Shift + S | F17            | F18                 | Ctrl + Alt + Tab |
+|                     | Magick command | Inkscape.exe [file] |                  |
 
 ### Row 4
 
-| Volume Down | Volume Up | Mute/Unmute Mic     | Switch Audio Input |
-| ----------- | --------- | ------------------- | ------------------ |
-| KC_VOLD     | KC_VOLU   | Windows + Shift + A | F19                |
-|             |           |                     |                    |
+| Volume Down | Volume Up | Task Manager       | Fancy Zones         |
+| ----------- | --------- | ------------------ | ------------------- |
+| KC_VOLD     | KC_VOLU   | Ctrl + Shift + ESC | Windows + Shift + ` |
 
-## Commands
 
-### Convert C code to JSON:
-
-qmk c2json -km=1upkeyboards/sweet16/v1/keymaps/ivan -kb=1upkeyboards/sweet16/v1 -o ./keymap.json keymap.c
 
 ## Instructions
 
 - With ***QMK MSYS***, use the *keymap.json* to generate the HEX file that's to be flashed the macropad. 
-  - Once you have the HEX file, use ***QMK Toolbox*** with the macropad connected and hit the Reset switch on the macropad.
+
+***qmk json2c keymap.json -o keymap.c*** to convert *keymap.json* to *keymap.c* so you can compile.
+
+***qmk compile*** command should work as the ***qmk config*** has defaults set to keymap and it'll spit out the HEX file in the qmk_firmware directory. Be sure to delete the existing HEX file.
+
+- Once you have the HEX file, use ***QMK Toolbox*** with the macropad connected and hit the Reset switch on the macropad.
   - You'll notice with QMK Toolbox that it's flashing based on the output.

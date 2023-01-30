@@ -7,8 +7,9 @@
     [{ "action": "tap", "keycodes": ["RGUI", "RCTL", "T"] }],
     [{ "action": "tap", "keycodes": ["RGUI", "RALT", "P"] }],
     [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "S"] }],
-    [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "O"] }],
-    [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "A"] }]
+    [{ "action": "tap", "keycodes": ["RCTL", "RALT", "TAB"] }],
+    [{ "action": "tap", "keycodes": ["RCTL", "RSFT", "ESC"] }],
+    [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "GRV"] }]
   ],
   "layers": [
     [
@@ -27,7 +28,7 @@
       "KC_VOLD",
       "KC_VOLU",
       "QK_MACRO_6",
-      "KC_F19"
+      "QK_MACRO_7"
     ]
   ],
   "layout": "LAYOUT_ortho_4x4"
