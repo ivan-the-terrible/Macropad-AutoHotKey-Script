@@ -32,11 +32,15 @@ The PNG and SVG have been formatted to a size that will fit underneath the keyca
 
 ## Instructions
 
-- With ***QMK MSYS***, use the *keymap.json* to generate the HEX file that's to be flashed the macropad. 
+- With [QMK MSYS](https://msys.qmk.fm/), use the *keymap.json* to generate the HEX file that's to be flashed the macropad.
+  - Alternatively, you can generate the HEX file online: [QMK Configurator](https://config.qmk.fm/#/melgeek/mach80/rev1/LAYOUT_tkl_ansi)
+
 
 ***qmk json2c keymap.json -o keymap.c*** to convert *keymap.json* to *keymap.c* so you can compile.
 
 ***qmk compile*** command should work as the ***qmk config*** has defaults set to keymap and it'll spit out the HEX file in the qmk_firmware directory. Be sure to delete the existing HEX file.
 
-- Once you have the HEX file, use ***QMK Toolbox*** with the macropad connected and hit the Reset switch on the macropad.
+- Once you have the HEX file, use [QMK Toolbox](https://github.com/qmk/qmk_toolbox) with the macropad connected and hit the Reset switch on the macropad.
   - You'll notice with QMK Toolbox that it's flashing based on the output.
+
+Visit the [QMK Docs](https://docs.qmk.fm/#/) for more context.
