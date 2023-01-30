@@ -26,7 +26,7 @@
 | ----------- | --------- | ------------------ | ------------------- |
 | KC_VOLD     | KC_VOLU   | Ctrl + Shift + ESC | Windows + Shift + ` |
 
-
+![Macro Pad Icons](C:\Users\Ivan\Documents\AutoHotkey\Macropad AutoHotKey Script\Macro Pad Icons.png)
 
 ## Instructions
 
