@@ -26,7 +26,9 @@
 | ----------- | --------- | ------------------ | ------------------- |
 | KC_VOLD     | KC_VOLU   | Ctrl + Shift + ESC | Windows + Shift + ` |
 
-![Macro Pad Icons](./Macro Pad Icons.png)
+The PNG and SVG have been formatted to a size that will fit underneath the keycaps should you print it out.
+
+![Macro Pad Icons](https://github.com/ivan-the-terrible/Macropad-AutoHotKey-Script/blob/master/Macro%20Pad%20Icons.png)
 
 ## Instructions
 
