@@ -2,6 +2,7 @@
   "keyboard": "1upkeyboards/sweet16/v1",
   "keymap": "1upkeyboards/sweet16/v1/keymaps/ivan",
   "macros": [
+    [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "H"] }],
     [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "C"] }],
     [{ "action": "tap", "keycodes": ["RGUI", "RSFT", "M"] }],
     [{ "action": "tap", "keycodes": ["RGUI", "RCTL", "T"] }],
@@ -16,19 +17,19 @@
       "KC_F13",
       "KC_F14",
       "KC_F15",
-      "KC_F16",
       "QK_MACRO_0",
       "QK_MACRO_1",
       "QK_MACRO_2",
       "QK_MACRO_3",
       "QK_MACRO_4",
+      "QK_MACRO_5",
       "KC_F17",
       "KC_F18",
-      "QK_MACRO_5",
+      "QK_MACRO_6",
       "KC_VOLD",
       "KC_VOLU",
-      "QK_MACRO_6",
-      "QK_MACRO_7"
+      "QK_MACRO_7",
+      "QK_MACRO_8"
     ]
   ],
   "layout": "LAYOUT_ortho_4x4"

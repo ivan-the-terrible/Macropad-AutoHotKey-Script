@@ -2,10 +2,10 @@
 
 ### Row 1
 
-| Open w/ VSCode = F13 | Extract Files | Archive Files | F16??? |
-| -------------------- | ------------- | ------------- | ------ |
-| F13                  | F14           | F15           |        |
-|                      | 7zip command  | 7zip command  |        |
+| Open w/ VSCode = F13 | Extract Files | Archive Files | Mouse Highlighter   |
+| -------------------- | ------------- | ------------- | ------------------- |
+| F13                  | F14           | F15           | Windows + Shift + H |
+|                      | 7zip command  | 7zip command  |                     |
 
 ### Row 2
 
