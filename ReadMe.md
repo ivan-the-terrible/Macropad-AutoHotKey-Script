@@ -4,7 +4,7 @@
 
 By programming the [Sweet 16 Macro Pad Black from 1upkeyboards](https://1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black/) with [QMK](https://github.com/qmk) and [AutoHotkey](https://www.autohotkey.com/), I get dedicated keys for [PowerToys](https://github.com/microsoft/PowerToys) and acting on selected files within File Explorer (open with VSCode and Inkscape, use the [7-zip console executable](https://www.7-zip.org/download.html) to extract and archive, and use [ImageMagick](https://github.com/ImageMagick/ImageMagick) to convert files to PNG).
 
-The PNG and SVG you see here has been formatted to a size that will fit underneath the keycaps should you print it out.
+The SVG you see here has been formatted to a size that will fit underneath the keycaps should you print it out (see the ***Printables*** directory).
 
 ![Macro Pad Icons](https://github.com/ivan-the-terrible/Macropad-AutoHotKey-Script/blob/master/Macro%20Pad%20Icons%20-%20Grid.svg)
 
