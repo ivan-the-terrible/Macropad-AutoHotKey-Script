@@ -11,17 +11,6 @@ F13::
 
 F14::
 {
-	; Extract file(s) using 7zip --- will absolutely overwrite with -y flag
-	; Command is '7zr.exe' with 'x -y' flags to eXtract and Yes to all inquiries, then path of file
-	workingDir := Explorer_GetPath()
-	sel := Explorer_GetSelected_FilesOnly_AsArray()
-	if sel.Length > 0
-		for file in sel
-			Run "C:\Program Files\7-Zip\7zr.exe x -y " file, workingDir
-}
-
-F15::
-{
 	; Add selected file(s)/folder(s) to a 7z archive using 7zip
 	; Command is '7zr.exe' with 'a -t7z archive.7z' to create Archive of type 7z with name archive.7z,
 	; then the paths of file(s)/folder(s) to be added to the archive
@@ -29,6 +18,17 @@ F15::
 	sel := Explorer_GetSelected_AsString()
 	if sel != ""
 		Run "C:\Program Files\7-Zip\7zr.exe a -t7z archive.7z " . sel, workingDir
+}
+
+F15::
+{
+	; Extract file(s) using 7zip --- will absolutely overwrite with -y flag
+	; Command is '7zr.exe' with 'x -y' flags to eXtract and Yes to all inquiries, then path of file
+	workingDir := Explorer_GetPath()
+	sel := Explorer_GetSelected_FilesOnly_AsArray()
+	if sel.Length > 0
+		for file in sel
+			Run "C:\Program Files\7-Zip\7zr.exe x -y " file, workingDir
 }
 
 F17::
