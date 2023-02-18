@@ -4,7 +4,7 @@
 
 By programming the [Sweet 16 Macro Pad Black from 1upkeyboards](https://1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black/) with [QMK](https://github.com/qmk) and [AutoHotkey](https://www.autohotkey.com/), I get dedicated keys for [PowerToys](https://github.com/microsoft/PowerToys) and acting on selected files within File Explorer (open with VSCode and Inkscape, use the [7-zip console executable](https://www.7-zip.org/download.html) to extract and archive, and use [ImageMagick](https://github.com/ImageMagick/ImageMagick) to convert files to PNG).
 
-The PNG and SVG you see here has been formatted to a size that will fit underneath the keycaps should you print it out.
+The SVG you see here has been formatted to a size that will fit underneath the keycaps should you print it out (see the ***Printables*** directory).
 
 ![Macro Pad Icons](https://github.com/ivan-the-terrible/Macropad-AutoHotKey-Script/blob/master/Macro%20Pad%20Icons%20-%20Grid.svg)
 
@@ -40,17 +40,17 @@ The PNG and SVG you see here has been formatted to a size that will fit undernea
 
 With [QMK MSYS](https://msys.qmk.fm/) locally or [QMK Configurator](https://config.qmk.fm/#/melgeek/mach80/rev1/LAYOUT_tkl_ansi) online, use the *keymap.json* to generate the HEX file that's to be flashed the macropad.
 
-Once you have a HEX file, you can flash the macropad via [QMK Toolbox](https://github.com/qmk/qmk_toolbox)
+Once you have a HEX file, you can flash the macropad via [QMK Toolbox](https://github.com/qmk/qmk_toolbox).
 
 ### Some Specific Steps & Commands for *QMK MSYS*
 
-***qmk compile*** command has many parameters, but if you use the ***qmk config***, as I have with the defaults set as seen below, it'll spit out the HEX file in the ***qmk_firmware*** directory by just running ***qmk compile***. Be sure to delete the existing HEX file if you make any changes within the keymap files as there seems to be some caching.
+`qmk compile` command has many parameters, but if you use the `qmk config` command, as I have with the defaults set as seen below, it'll spit out the HEX file in the ***qmk_firmware*** directory by just running `qmk compile` without specifying parameters. Be sure to delete the existing HEX file if you make any changes within the keymap files as there seems to be some caching.
 
-- compile.keyboard=1upkeyboards/sweet16/v1
-  compile.keymap=1upkeyboards/sweet16/v1/keymaps/ivan
+- `qmk config compile.keyboard=1upkeyboards/sweet16/v1`
+- `qmk config compile.keymap=1upkeyboards/sweet16/v1/keymaps/ivan`
   - Be sure to create your own keymaps directory as I have
 
-Within your ***keymaps*** directory for the 1upkeyboards/sweet16, ***qmk json2c keymap.json -o keymap.c*** to convert *keymap.json* to *keymap.c*. Now you can run ***qmk compile*** against that ***keymap.c*** file.
+Within your ***keymaps*** directory for the 1upkeyboards/sweet16, `qmk json2c keymap.json -o keymap.c` to convert *keymap.json* to *keymap.c*. Now you can run `qmk compile` against that ***keymap.c*** file.
 
 Once you have the HEX file, use [QMK Toolbox](https://github.com/qmk/qmk_toolbox) with the macropad connected and hit the Reset switch on the macropad.
 
@@ -66,3 +66,5 @@ Initially, I found a really useful script to detect what items in an active File
 Be sure to examine the script and update any program paths to fit your machine.
 
 There is some neat stuff in there about Windows' COM objects too ;)
+
+![Finished Macro Pad](https://github.com/ivan-the-terrible/Macropad-AutoHotKey-Script/blob/master/Finished.jpg)
